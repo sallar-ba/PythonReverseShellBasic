@@ -19,6 +19,7 @@ def createSocket():
 # Binding the Socket and Listening for Connections
 def bindSocket():
     try:
+        global s
         print("Binding Port: " + str(port))
 
         s.bind((host, port)) # Tuple in Python
