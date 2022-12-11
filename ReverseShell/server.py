@@ -33,3 +33,10 @@ def bindSocket():
     except socket.error as msg:
         print("Socket Binding Error: " + str(msg) + "\n" + "Retrying...")
         bindSocket() # Recursively Calling Again
+
+# Accepting Connection With Client (Sockets Must Be Listening)
+def acceptSocket():
+    connection, address = s.accept()
+    print("Connection Established With: IP " + address[0] + ", Port: " + str(address[1]))
+
+    connection.close()
