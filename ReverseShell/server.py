@@ -19,3 +19,17 @@ def createSocket():
         print("Socket Creation Error: " + str(msg))
 
 # Binding the Socket and Listening for Connections
+def bindSocket():
+    try:
+        global host
+        global port
+        global s
+
+        print("Binding Port: " + str(port))
+
+        s.bind((host, port)) # Tuple in Python
+        s.listen(5) # Atmost 5 connections
+
+    except socket.error as msg:
+        print("Socket Binding Error: " + str(msg) + "\n" + "Retrying...")
+        bindSocket() # Recursively Calling Again
