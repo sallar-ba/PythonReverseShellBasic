@@ -46,6 +46,7 @@ def sendCommand(connection):
             connection.close()
             s.close()
             sys.exit()
+
         if len(str.encode(cmd)) > 0:
             connection.send(str.encode(cmd))
             clientResponse = str(connection.recv(1024), "utf-8")
