@@ -10,7 +10,7 @@ This repository contains a simple Python implementation of a reverse shell, allo
 To use this script, simply clone the repository using the following command:
 
 ```bash
-  git clone https://github.com/sallar-ba/PythonReverseShellBasic.git
+  git clone https://github.com/sallar-ba/PythonReverseShell.git
 ```
     
 ## Usage
